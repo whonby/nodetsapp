@@ -1,5 +1,5 @@
 {
-  "name": "projet1",
+  "name": "nodets",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,11 @@
     "dev": "concurrently -n \"TS, Node \" \"npx tsc --watch\" \"nodemon dist/index.js\""
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name":"Guei Roland",
+    "email": "gueiroland1@gmail.com",
+    "role":"Lead Developer"
+  },
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^4.1.1",
