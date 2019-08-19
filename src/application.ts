@@ -15,7 +15,6 @@ class Application {
     }
 
     setting(){
-
         try {
             this.app.set("port",3000);
 

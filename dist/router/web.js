@@ -5,9 +5,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const router = express_1.default.Router();
-// We load the controller here
+const routeService_1 = __importDefault(require("../config/routeService"));
 const BookController = require("../http/controller/BookController");
-// Show index
+const route = new routeService_1.default;
+route.getAction("/booksliste", "BookController@index");
+console.log(BookController.index);
 router.get("/", (req, resp) => {
     resp.render("index");
 });

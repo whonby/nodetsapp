@@ -12,11 +12,18 @@ class BookController {
      * @return {*}
      */
     index(req, resp) {
-        book_model_1.default.find((err, books) => {
+        let p = parseInt(req.query.page || 1);
+        let size = parseInt(req.query.size || 5);
+        book_model_1.default.paginate({}, { page: p, limit: size }, (err, books) => {
             if (err)
                 resp.status(500).send(err);
-            else
-                resp.send(books);
+            else {
+                //  resp.send(books);
+                console.log(books.pages);
+                resp.render("book/index", {
+                    livre: books
+                });
+            }
         });
     }
     /**

@@ -1,0 +1,38 @@
+<hr>
+<div class="card border-primary ">
+    <div class="card-header">List des livres</div>
+    <div class="card-body">
+
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Auteur</th>
+                <th scope="col">Prix</th>
+                <th scope="col">Quantite</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each livre.docs}}
+                <tr>
+                    <th scope="row">{{title}}</th>
+                    <td>{{author}}</td>
+                    <td>{{price}}</td>
+                    <td>{{price}}</td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+
+        <nav aria-label="...">
+            <ul class="pagination pagination-sm">
+    {{#each livre.pages}}
+                <li class="page-item">
+                    <a class="page-link" href="#" tabindex="-1">4</a>
+                </li>
+    {{/each}}
+            </ul>
+        </nav>
+
+    </div>
+</div>

@@ -1,10 +1,11 @@
 import  express, {Request,Response} from "express";
 const router = express.Router();
-
-// We load the controller here
+import RouteService from "../config/routeService"
 const BookController=require("../http/controller/BookController");
 
-// Show index
+const route=new RouteService;
+route.getAction("/booksliste","BookController@index");
+console.log(BookController.index);
 router.get("/",(req:Request,resp:Response)=>{
     resp.render("index");
 });

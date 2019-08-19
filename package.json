@@ -9,6 +9,7 @@
     "clean": "rimraf ./dist",
     "public": "ncp ./src/public/ ./dist/public/",
     "hpscopy":"ncp ./src/views/ ./dist/views/"
+
   },
   "keywords": [],
   "author": {
