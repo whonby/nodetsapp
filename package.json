@@ -8,16 +8,30 @@
     "dev": "concurrently -n \"TS, Node \" \"npx tsc --watch\" \"nodemon dist/index.js\" \"ncp ./src/public/ ./dist/public/  \" \"ncp ./src/views/ ./dist/views/  \"",
     "clean": "rimraf ./dist",
     "public": "ncp ./src/public/ ./dist/public/",
-    "hpscopy":"ncp ./src/views/ ./dist/views/"
-
+    "hpscopy": "ncp ./src/views/ ./dist/views/"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whonby/nodetsapp.git"
+  },
+  "keywords": [
+    "nodejs",
+    "node framework",
+    "node mvc",
+    "Guei",
+    "roland",
+    "Guei Roland"
+  ],
   "author": {
     "name": "Guei Roland",
     "email": "gueiroland1@gmail.com",
     "role": "Lead Developer"
   },
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/whonby/nodetsapp/issues",
+    "email": "gueiroland1@gmail.com"
+  },
   "devDependencies": {
     "concurrently": "^4.1.1",
     "nodemon": "^1.19.1",
@@ -33,7 +47,9 @@
     "express-handlebars": "^3.1.0",
     "mongoose": "^5.6.9",
     "mongoose-paginate": "^5.0.3",
+    "mssql": "^6.2.0",
     "ncp": "^2.0.0",
     "rimraf": "^3.0.0"
-  }
+  },
+  "homepage": "https://github.com/whonby/nodetsapp"
 }
